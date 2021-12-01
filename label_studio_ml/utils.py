@@ -81,7 +81,7 @@ def get_choice(completion):
 
 
 def get_image_local_path(url, image_cache_dir=None, project_dir=None, image_dir=None):
-    return get_local_path(url, image_cache_dir, project_dir, get_env('HOSTNAME'), image_dir)
+    return get_local_path(url, image_cache_dir, project_dir, get_env('HOSTNAME'), image_dir, os.getenv('ACCESS_TOKEN_LABEL_STUDIO'))
 
 
 def get_local_path(url, cache_dir=None, project_dir=None, hostname=None, image_dir=None, access_token=None):
